@@ -167,3 +167,12 @@ td img {
 margin-right: 150px;
     margin-top: 10px;
 }
+
+.edit{
+width: 50px;
+    color: #3d3d3d;
+}
+.delete{
+    color: #3d3d3d;
+}
+

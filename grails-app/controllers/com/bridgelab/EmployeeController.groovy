@@ -7,7 +7,7 @@ class EmployeeController {
 
     EmployeeService employeeService
 
-    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"  ]
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
@@ -66,10 +66,12 @@ class EmployeeController {
 
         try {
             employeeService.delete(id)
+
         } catch (ValidationException e) {
-            respond employee.errors, view:'create'
+            respond employee.errors, view:""
             return
         }
+
         redirect(controller: "employee", action: "")
 
     }

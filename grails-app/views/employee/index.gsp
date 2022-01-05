@@ -46,15 +46,12 @@ ${p.departments}
 
 <td>
 <g:form resource="${this.employee}" method="DELETE">
-<fieldset class="buttons">
-               <a href="/employee/edit/${p.id}"><g:img dir="images" file="create-black-18dp.svg"/></a>
-                    <a href="/employee/delete/${p.id}" ><g:img dir="images" file="delete-black-18dp.svg"/></a>
-</fieldset>
+<input type="submit" formaction="/employee/edit/${p.id}" value="Edit" class="edit" >
+<input type="submit" formaction="/employee/delete/${p.id}" value="Delete" class="delete" >
             </g:form>
+</td>
             </tr>
 </g:each>
 </table>
-
-
     </body>
 </html>
